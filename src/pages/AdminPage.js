@@ -7,8 +7,6 @@ import {
   get,
   update,
   remove,
-  query,
-  orderByChild,
 } from "firebase/database";
 import "../styles/AdminPage.css";
 

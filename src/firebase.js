@@ -6,9 +6,6 @@ import {
   push,
   get,
   update,
-  remove,
-  query,
-  orderByChild,
 } from "firebase/database";
 import { getAnalytics } from "firebase/analytics";
 

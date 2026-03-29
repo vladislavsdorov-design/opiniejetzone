@@ -149,7 +149,7 @@ function HomePage() {
                 ></i>{" "}
                 {instructor.clicks || 0} opinii
               </div>
-              <img className="logofot" src="/logojet.png"></img>
+              <img className="logofot" src="/logojet.png" alt=""></img>
             </div>
 
             <h3 className="instructor-name">{instructor.name}</h3>

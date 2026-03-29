@@ -1,0 +1,371 @@
+.home-container {
+  min-height: 100vh;
+}
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cinzel:wght@400..900&family=Gravitas+One&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Righteous&family=Rubik+Mono+One&family=Special+Gothic+Expanded+One&family=Stalinist+One&display=swap");
+.hero-section {
+  text-align: center;
+  padding: 60px 20px 40px;
+  color: white;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Orbitron", sans-serif;
+
+  /* Анимация */
+  opacity: 0; /* начальное состояние невидимо */
+  transform: scale(0.8); /* чуть меньше, чем нормальный размер */
+  animation: fadeInScale 1s forwards; /* название, длительность, финальное состояние */
+}
+
+/* Определение keyframes */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.95;
+}
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Видео */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Затемнение */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.801); /* регулируй темноту */
+  z-index: -1;
+}
+/* ===== STOPKA ===== */
+.site-footer {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 28px 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 100px;
+}
+
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-brand {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-address {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+}
+
+.footer-note {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 4px auto 0;
+}
+/* Контент поверх */
+.hero-section,
+.instructors-grid,
+.modal-overlay,
+.success-toast {
+  position: relative;
+  z-index: 1;
+}
+.instructors-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.instructor-card {
+  background: rgba(255, 255, 255, 0.096);
+  backdrop-filter: blur(200px); /* размытие */
+  -webkit-backdrop-filter: blur(10px); /* для Safari */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: rgba(255, 254, 216, 0.534); /* прозрачный фон */
+  backdrop-filter: blur(10px); /* размытие */
+  -webkit-backdrop-filter: blur(10px); /* для Safari */
+
+  border-radius: 12px; /* по желанию */
+  border: 1px solid rgba(255, 255, 255, 0); /* легкий контур */
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructor-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  border: 3px solid rgba(0, 0, 0, 0.493);
+}
+
+.instructor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.click-badge {
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 5px 20px;
+  border-radius: 8px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.267);
+  font-size: 20px;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  font-weight: bold;
+  color: #000000;
+}
+
+.instructor-name {
+  padding: 20px 20px 10px;
+  font-size: 1.4rem;
+  color: #ffffffc7;
+  font-family: "Montserrat", sans-serif;
+}
+
+.instructor-bio {
+  padding: 0 20px;
+  color: #ffffff;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  min-height: 50px;
+}
+
+.review-btn {
+  width: calc(100% - 40px);
+  margin: 0 20px 20px;
+  padding: 12px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  border: solid 1px white;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.logofot {
+  height: 30px;
+}
+.review-btn:hover {
+  transform: scale(1.02);
+
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.247); /* прозрачный фон */
+  backdrop-filter: blur(20px); /* размытие */
+  -webkit-backdrop-filter: blur(20px); /* для Safari */
+  border-radius: 20px;
+  padding: 30px 13px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s;
+}
+.modal-content h2 {
+  color: white;
+  font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.modal-instructor-name {
+  font-size: 1.3rem;
+  color: #fffb00e8;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+}
+
+.modal-text {
+  margin: 20px 30px;
+  line-height: 1.4;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: #c5c5c5;
+}
+
+.modal-buttons {
+  display: flex;
+
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.modal-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.confirm-btn {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.success-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #48bb78;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  animation: slideUp 0.3s, fadeOut 0.3s 2.7s forwards;
+  z-index: 1001;
+  font-weight: bold;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
